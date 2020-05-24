@@ -30,7 +30,7 @@ gcloud config set compute/zone australia-southeast1-a
 ```
 gcloud container clusters create nzspectral-cluster --num-nodes=2
 ```
-### test to see the cluster's two worker VM instances:
+#### test to see the cluster's two worker VM instances:
 ```
 gcloud compute instances list
 ```
@@ -44,7 +44,7 @@ gke-nzspectral-cluster-default-pool-a77523c4-k4hs  australia-southeast1-a  n1-st
 ```
 kubectl create deployment spectralwebapp --image=gcr.io/${PROJECT_ID}/spectralwebapp:v1
  ```
-### view pods created by deployment:
+#### view pods created by deployment:
 ```
 kubectl get pods
 ```
@@ -53,7 +53,7 @@ kubectl get pods
 ```
 kubectl expose deployment spectralwebapp --type=LoadBalancer --port 80 --target-port 8080
 ```
-### return external application IP.
+#### return external application IP.
 ```
 kubectl get service
 ```
