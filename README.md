@@ -66,7 +66,8 @@ kubectl get service
 
 
 
-
+#### pod crashing?
+https://cloud.google.com/kubernetes-engine/docs/troubleshooting
 
 
 
