@@ -1,23 +1,19 @@
-Google Cloud Platform Instructions:
+## Google Cloud Platform Instructions:
 
-Create a project (nzspectralwebapp), open cloud shell, enter:
+https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
+#### Create a project (nzspectralwebapp), open cloud shell, enter:
 ```
 git clone https://github.com/NZSpectralDatabase/NZSpectralWebApp
 cd NZSpectralWebApp
-```
-```
+``` ```
 export PROJECT_ID=nzspectralwebapp
-```
-```
+``` ```
 docker build -t gcr.io/${PROJECT_ID}/spectralwebapp:v1 .
-```
-```
+``` ```
 docker images
-```
-```
+``` ```
 gcloud auth configure-docker
-```
-```
+``` ```
 docker push gcr.io/${PROJECT_ID}/spectralwebapp:v1
 ```
 
@@ -27,7 +23,7 @@ docker push gcr.io/${PROJECT_ID}/spectralwebapp:v1
 
 
 
-*** Forked Repo Readme:
+## Forked Repo Readme:
 
 [![Join the chat at https://gitter.im/formio/formio](https://badges.gitter.im/formio/formio.svg)](https://gitter.im/formio/formio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![StackOverflow](https://www.codewake.com/badges/codewake2.svg)](http://stackoverflow.com/tags/formio)
