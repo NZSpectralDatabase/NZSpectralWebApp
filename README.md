@@ -5,17 +5,47 @@ https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
 ```
 git clone https://github.com/NZSpectralDatabase/NZSpectralWebApp
 cd NZSpectralWebApp
-``` ```
+``` 
+```
 export PROJECT_ID=nzspectralwebapp
-``` ```
+``` 
+```
 docker build -t gcr.io/${PROJECT_ID}/spectralwebapp:v1 .
-``` ```
+``` 
+```
 docker images
-``` ```
+``` 
+```
 gcloud auth configure-docker
-``` ```
+``` 
+```
 docker push gcr.io/${PROJECT_ID}/spectralwebapp:v1
 ```
+```
+gcloud config set project $PROJECT_ID
+gcloud config set compute/zone australia-southeast1-a
+```
+
+### create a two-node(?) cluster:
+```
+gcloud container clusters create nzspectral-cluster --num-nodes=2
+```
+### test to see the cluster's two worker VM instances:
+```
+gcloud compute instances list
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
