@@ -43,8 +43,10 @@ print(leaf)             #view spectrum value data.
 plants = specdal.collection.Collection(name=str('plant_coll'))
 plants.append(leaf)     # adds specdal spectrum value to the collection.
 
-# The most effective method to use this module would be to create a collection, and then iterate through the working directory for a spectral plant form, reading and appending each spectrum.
-# Once collated, use the data to output the desired figures (a plot of each asd, a plot of the mean values of each spectrum, or a spreadsheet).
+# The most effective method to use this module would be to create a collection, and then iterate through the 
+# working directory for a spectral plant form, reading and appending each spectrum.
+# Once collated, use the data to output the desired figures 
+# (a plot of each asd, a plot of the mean values of each spectrum, or a spreadsheet).
 drct = r"C:\Users\Ellis\Desktop\spectest"
 plantAsds = specdal.collection.Collection(name=str('plant_coll'))
 for asd in os.listdir(drct):
